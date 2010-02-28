@@ -1,0 +1,6 @@
+[submodule "library/zend"]
+	path = library/zend
+	url = git://github.com/kokx/zf-library.git
+[submodule "library/kokx"]
+	path = library/kokx
+	url = git://github.com/kokx/kokx-library.git
