@@ -6,3 +6,7 @@ Created by Pieter Kokx
 IRC Channel
 ===========
 When there is a stable version, this bot can be found in #firal on irc.freenode.net
+
+Disclaimer
+==========
+This bot is *not* part of the official Firal source.
