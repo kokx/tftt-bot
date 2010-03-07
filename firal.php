@@ -17,17 +17,14 @@ $autoloader = Zend_Loader_Autoloader::getInstance();
 
 $autoloader->registerNamespace('Kokx');
 
-$client = new Kokx_Irc_Client(array(
-    'address'  => 'irc.freenode.net',
-    'nickname' => 'Firal_Bot',
-    'username' => 'Firal_Bot',
-    'realname' => 'Firal Bot',
-    'version'  => 'Firal IRC bot v0.1'
-));
+// configuration
+$config = require_once ROOT_PATH . DIRECTORY_SEPARATOR . 'config.php';
+
+$client = new Kokx_Irc_Client($config['client']);
 
 $bot = new Kokx_Irc_Bot($client, array(
     'plugins' => array(
-        new Kokx_Irc_Bot_Plugin_GitHub(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'github-json')
+        new Kokx_Irc_Bot_Plugin_GitHub($config['bot']['plugins']['github']['savefile'])
     )
 ));
 

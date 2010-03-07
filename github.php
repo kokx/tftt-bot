@@ -9,4 +9,4 @@ if (!preg_match('/github\.com$/i', gethostbyaddr($_SERVER['REMOTE_ADDR']))) {
 $config = require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'config.php';
 
 // just save the data
-file_put_contents($config['github']['savefile'], $_POST['payload']);
+file_put_contents($config['bot']['plugins']['github']['savefile'], $_POST['payload']);
