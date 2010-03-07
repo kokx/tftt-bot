@@ -25,6 +25,12 @@ $client = new Kokx_Irc_Client(array(
     'version'  => 'Firal IRC bot v0.1'
 ));
 
+$bot = new Kokx_Irc_Bot($client, array(
+    'plugins' => array(
+        new Kokx_Irc_Bot_Plugin_GitHub(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'github-json')
+    )
+));
+
 $client->sendRaw('JOIN #firal');
 
 // connect and start listening
