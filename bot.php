@@ -24,11 +24,11 @@ $client = new Kokx_Irc_Client($config['client']);
 
 $bot = new Kokx_Irc_Bot($client, array(
     'plugins' => array(
-        new Kokx_Irc_Bot_Plugin_GitHub($config['bot']['plugins']['github']['savefile'])
+        new Kokx_Irc_Bot_Plugin_Achievements()
     )
 ));
 
-$client->sendRaw('JOIN #firal');
+$client->sendRaw('JOIN #teamfuckthetheme');
 
 // connect and start listening
 $client->connect();
