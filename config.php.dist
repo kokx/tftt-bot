@@ -1,17 +1,13 @@
 <?php
 return array(
-    'bot' = array(
-        'plugins' => array(
-            'github' => array(
-                'savefile'  => dirname(__FILE__) . DIRECTORY_SEPARATOR . 'github-json'
-            )
-        )
+    'bot' => array(
+        'plugins' => array()
     ),
     'client' => array(
-        'address'  => 'irc.freenode.net',
-        'nickname' => 'Firal_Bot',
-        'username' => 'Firal_Bot',
-        'realname' => 'Firal Bot',
-        'version'  => 'Firal IRC bot v0.1'
+        'address'  => '',
+        'nickname' => '',
+        'username' => '',
+        'realname' => '',
+        'version'  => ''
     )
 );
