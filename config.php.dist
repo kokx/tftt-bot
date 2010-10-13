@@ -1,7 +1,8 @@
 <?php
 return array(
     'bot' => array(
-        'plugins' => array()
+        'plugins' => array(),
+        'channels' => array('#teamfuckthetheme')
     ),
     'client' => array(
         'address'  => '',

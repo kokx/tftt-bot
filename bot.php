@@ -28,7 +28,7 @@ $bot = new Kokx_Irc_Bot($client, array(
     )
 ));
 
-$client->sendRaw('JOIN #teamfuckthetheme');
+$client->join($config['bot']['channels']);
 
 // connect and start listening
 $client->connect();
