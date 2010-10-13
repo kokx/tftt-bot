@@ -1,7 +1,12 @@
 <?php
 return array(
     'bot' => array(
-        'plugins' => array(),
+        'plugins'  => array(
+            'NickServ' => array(
+                'nick'     => 'NickServ',
+                'password' => ''
+            )
+        ),
         'channels' => array('#teamfuckthetheme')
     ),
     'client' => array(
