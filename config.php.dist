@@ -7,7 +7,7 @@ return array(
                 'password' => ''
             )
         ),
-        'channels' => array('#teamfuckthetheme')
+        'channels' => array()
     ),
     'client' => array(
         'address'  => '',
