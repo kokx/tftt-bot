@@ -20,16 +20,20 @@ $autoloader->registerNamespace('Kokx');
 // configuration
 $config = require_once ROOT_PATH . DIRECTORY_SEPARATOR . 'config.php';
 
+// db
+$db = Zend_Db::factory($config['bot']['db']['adapter'], $config['bot']['db']['options']);
+
 $client = new Kokx_Irc_Client($config['client']);
 
+// bot
 $bot = new Kokx_Irc_Bot($client, array(
     'plugins' => array(
-        new Kokx_Irc_Bot_Plugin_NickServ($config['plugins']['NickServ']),
-        new Kokx_Irc_Bot_Plugin_Achievements()
+        new Kokx_Irc_Bot_Plugin_NickServ($config['bot']['plugins']['NickServ']),
+        new Kokx_Irc_Bot_Plugin_Achievements($db)
     )
 ));
 
+// starting stuff up
 $client->join($config['bot']['channels']);
 
-// connect and start listening
 $client->connect();
