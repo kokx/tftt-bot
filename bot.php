@@ -29,7 +29,8 @@ $client = new Kokx_Irc_Client($config['client']);
 $bot = new Kokx_Irc_Bot($client, array(
     'plugins' => array(
         new Kokx_Irc_Bot_Plugin_NickServ($config['bot']['plugins']['NickServ']),
-        new Kokx_Irc_Bot_Plugin_Achievements($db)
+        new Kokx_Irc_Bot_Plugin_Achievements($db),
+        new Kokx_Irc_Bot_Plugin_GitHub($config['bot']['plugins']['github']['savefile'])
     )
 ));
 

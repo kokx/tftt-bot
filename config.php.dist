@@ -5,6 +5,9 @@ return array(
             'NickServ' => array(
                 'nick'     => 'NickServ',
                 'password' => ''
+            ),
+            'github' => array(
+                'savefile'  => dirname(__FILE__) . DIRECTORY_SEPARATOR . 'github-json'
             )
         ),
         'channels' => array(),
