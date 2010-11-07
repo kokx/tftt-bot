@@ -21,7 +21,7 @@ $autoloader->registerNamespace('Kokx');
 $config = require_once ROOT_PATH . DIRECTORY_SEPARATOR . 'config.php';
 
 // db
-$db = Zend_Db::factory($config['bot']['db']['adapter'], $config['bot']['db']['options']);
+$db = new Kokx_Db_Broker($config['bot']['db']['adapter'], $config['bot']['db']['options']);
 
 $client = new Kokx_Irc_Client($config['client']);
 
