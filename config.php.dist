@@ -7,7 +7,8 @@ return array(
                 'password' => ''
             ),
             'github' => array(
-                'savefile'  => dirname(__FILE__) . DIRECTORY_SEPARATOR . 'github-json'
+                'savefile' => dirname(__FILE__) . DIRECTORY_SEPARATOR . 'github-json'
+                'target'   => ''
             )
         ),
         'channels' => array(),
