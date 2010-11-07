@@ -7,7 +7,16 @@ return array(
                 'password' => ''
             )
         ),
-        'channels' => array()
+        'channels' => array(),
+        'db' => array(
+            'adapter' => 'pdo_mysql',
+            'options' => array(
+                'host'     => '',
+                'username' => '',
+                'password' => '',
+                'dbname'   => ''
+            )
+        )
     ),
     'client' => array(
         'address'  => '',
